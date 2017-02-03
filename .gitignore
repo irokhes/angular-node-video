@@ -38,3 +38,5 @@ jspm_packages
 
 # Client Dependencies
 public/vendor
+
+.env
