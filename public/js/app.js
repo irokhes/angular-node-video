@@ -6,12 +6,13 @@ var app = angular
               'ngMessages',
               'angularMoment',
               'angular-loading-bar',
+              'cloudinary',
               'ui.bootstrap',
               'appRoutes',
               'ngSanitize',
+              'ngFileUpload',
               'toastr',
               'ngLodash',
-            //   'hc.marked',
               'angularUtils.directives.dirDisqus',
               'satellizer'])
   .config(['cfpLoadingBarProvider','$authProvider', function(cfpLoadingBarProvider, $authProvider){
