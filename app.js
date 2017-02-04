@@ -4,7 +4,7 @@ var  express       = require('express'),
      bodyParser    = require('body-parser'),
      mongoose      = require('mongoose'),
      cors          = require('cors'),
-     db        = require('./config/db'),
+     db            = require('./config/db'),
      route         = require('./server/routes');
 
 var port = process.env.PORT || 3000;
@@ -63,5 +63,5 @@ app.get('*', function(req, res) {
  * Start Express server.
  */
 app.listen( port, function(){
-  console.log("Yourtube Server Listening on port ", port );
+  console.log("MoF Server Listening on port ", port );
 });

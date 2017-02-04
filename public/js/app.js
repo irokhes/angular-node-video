@@ -1,5 +1,5 @@
 var app = angular
-            .module('yourtube', [
+            .module('mof', [
               'ngCookies',
               'ngRoute',
               'ngStorage',

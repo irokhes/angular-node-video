@@ -1,9 +1,9 @@
 {
-  "name": "yourtube",
+  "name": "mof",
   "version": "0.0.0",
-  "homepage": "https://github.com/goodheads/yourtube",
+  "homepage": "https://github.com/irokhes/angular-node-video",
   "authors": [
-    "Prosper Otemuyiwa <prosperotemuyiwa@gmail.com>"
+    "Jorge <jorgereyero@gmail.com>"
   ],
   "moduleType": [
     "amd",
