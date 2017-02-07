@@ -6,7 +6,6 @@ var app = angular
               'ngMessages',
               'angularMoment',
               'angular-loading-bar',
-              'cloudinary',
               'ui.bootstrap',
               'appRoutes',
               'ngSanitize',
