@@ -1,7 +1,7 @@
-app.controller('UploadController', ['$scope', '$rootScope', '$location', 'toastr', 'Upload', 'Video', '$http',
+app.controller('UploadController', ['$scope', '$localStorage', 'toastr', 'Upload', 'Video',
 
   /* Uploading with Angular File Upload */
-  function($scope, $rootScope, $location, toastr, Upload, Video, $http) {
+  function($scope, $localStorage, toastr, Upload, Video) {
 
     $scope.uploadFiles = function(files){
       $scope.files = files;
@@ -22,13 +22,17 @@ app.controller('UploadController', ['$scope', '$rootScope', '$location', 'toastr
           }).success(function (data, status, headers, config) {
             file.status = "Done...100%. Draft Saved! Now, Hit the Publish Button to go live when you are ready";
             file.result = data;
+            console.log(data.response);
             var details = {
               title: $scope.video === undefined ? 'Default title' : $scope.video.title,
               public_id: data.response.public_id,
               description: $scope.video === undefined ? 'Default description' : $scope.video.description,
               url: data.response.secure_url,
               duration: data.response.duration,
-              format: data.response.format
+              format: data.response.format,
+              width: data.response.width,
+              height: data.response.height,
+              uploaded_by: $localStorage.email
             };
 
             Video.create(details, function(success, data){
@@ -40,6 +44,8 @@ app.controller('UploadController', ['$scope', '$rootScope', '$location', 'toastr
             });
 
             file.status = "Your Video is live now!";
+
+            console.log(data);
           }).error(function (data, status, headers, config) {
             file.result = data;
           });

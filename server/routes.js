@@ -16,4 +16,7 @@ module.exports = function(app) {
 
   app.post('/api/videos/create', token.ensureAuthenticated, Video.create);
   app.get('/api/videos', token.ensureAuthenticated, Video.retrieveAll);
+  
+  app.get('/api/video/:public_id', token.ensureAuthenticated, Video.retrieveEachVideoDetails);
+  app.put('/api/video/:public_id', token.ensureAuthenticated, Video.updateVideoDetails);
 };

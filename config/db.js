@@ -1,6 +1,7 @@
 var mongoose   = require('mongoose'),
     secrets    = require('./secrets');
- 
+    
+mongoose.Promise = require('bluebird');
 var db = mongoose.connection;
 mongoose.connect(secrets.db);
  
